@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="text/css" rel="stylesheet" href="../../css/style.css" />
+    <title>订单明细</title>
+</head>
+<body>
+<div id="header" class="wrap">
+    <div id="logo"><img src="../../images/logo.gif" /></div>
+    <div class="help"><a href="/index">返回前台页面</a></div>
+    <div class="navbar">
+        <ul class="clearfix">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="/manger/list">用户</a></li>
+            <li><a href="/product/list">商品</a></li>
+            <li class="current"><a href="/order/list">订单</a></li>
+            <li><a href="/note/list">留言</a></li>
+            <li><a href="/news/list">新闻</a></li>
+        </ul>
+    </div>
+</div>
+<div id="childNav">
+    <div class="welcome wrap">
+        管理员pillys您好，今天是2012-12-21，欢迎回到管理后台。
+    </div>
+</div>
+<div id="position" class="wrap">
+    您现在的位置：<a href="../index.html">易买网</a> &gt; 管理后台
+</div>
+<div id="main" class="wrap">
+    <div id="menu-mng" class="lefter">
+        <div class="box">
+            <dl>
+                <dt>用户管理</dt>
+                <dd><em><a href="/manger/add">新增</a></em><a href="/manger/list">用户管理</a></dd>
+                <dt>商品信息</dt>
+                <dd><em><a href="/category/add">新增</a></em><a href="/category/list">分类管理</a></dd>
+                <dd><em><a href="/product/add">新增</a></em><a href="/product/list">商品管理</a></dd>
+                <dt>订单管理</dt>
+                <dd><a href="/order/list">订单管理</a></dd>
+                <dt>留言管理</dt>
+                <dd><a href="/note/list">留言管理</a></dd>
+                <dt>新闻管理</dt>
+                <dd><em><a href="/news/add">新增</a></em><a href="/news/list">新闻管理</a></dd>
+            </dl>
+        </div>
+    </div>
+    <div class="main">
+        <h2>订单明细</h2>
+        <div class="manage">
+                <form action="search.html" method="post">
+                    <table class="list">
+                        <tr>
+                            <th>订单号</th>
+                            <th>客户id</th>
+                            <th>客户姓名</th>
+                            <th>订单状态</th>
+                            <th>送货地址</th>
+                        </tr>
+                        <tr>
+                            <td class="first w4 c"><%= order.oid %></td>
+                            <td class="w4 c"><%= order.uid %></td>
+                            <td class="w4 c"><%= order.name %></td>
+                            <td class="w4 c"><%= order.ostatus %></td>
+                            <td><%= order.addr %></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    Copyright &copy; 2019 传习教育 All Rights Reserved. 京ICP证1000001号
+</div>
+</body>
+</html>
